@@ -30,7 +30,6 @@ namespace Ejercicio5Bucles;
                 año = mI.PedirYMostrarAño();
 
 
-
                 if (numMes == 1 || numMes == 3 || numMes == 5 || numMes == 7 || numMes == 8 || numMes == 10 || numMes == 12)
 
                 {
