@@ -10,10 +10,28 @@ namespace Ejercicio5Bucles.Servicios
     {
         public int PedirYMostrarAño()
         {
+            do
+            { 
+
             int año;
+            
             Console.WriteLine("Introduzca el año deseado: ");
-            año = Convert.ToInt32(Console.ReadLine());
-            return año;
+
+            if (int.TryParse(Console.ReadLine(), out año)&& año>0)
+                {
+                    return año;
+                }
+
+                else
+                {
+                    Console.WriteLine("Opción no válida. Intentelo de nuevo.");
+
+                }
+            }
+
+            while (true);
+
+
         }
 
         public int PedirYMostrarMes()
