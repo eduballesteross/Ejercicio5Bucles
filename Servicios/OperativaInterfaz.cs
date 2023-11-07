@@ -8,6 +8,12 @@ namespace Ejercicio5Bucles.Servicios
 {
     internal interface OperativaInterfaz
     {
-        public void CalcularAñoBisiesto(int año);
+        /// <summary>
+        /// Método que calcula si el año introducido por el usuario es bisiesto o no.
+        /// 061123 - ebp
+        /// </summary>
+        /// <param name="año"></param>
+        /// <returns></returns>
+        public bool CalcularAñoBisiesto(int año);
     }
 }

@@ -18,14 +18,35 @@ namespace Ejercicio5Bucles.Servicios
 
         public int PedirYMostrarMes()
         {
+
             int numMes;
-           
+            int opcionMinima = 1;
+            int opcionMaxima = 12;
 
-            Console.WriteLine("Introduzca el número equivalente al mes deseado: "); 
-            numMes=Convert.ToInt32(Console.ReadLine());
 
-            return numMes;  
-            
+            do
+            {
+                Console.WriteLine("Ingrese un número equivalente al mes deseado: ");
+
+
+                if (int.TryParse(Console.ReadLine(), out numMes) && numMes >= opcionMinima && numMes <= opcionMaxima)
+                {
+                    return numMes;
+                }
+
+                else
+                {
+                    Console.WriteLine("Opción no válida. Intentelo de nuevo.");
+
+                }
+            }
+
+            while (true); 
+
+              
+
+
+
 
         }
     }

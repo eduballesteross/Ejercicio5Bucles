@@ -8,9 +8,32 @@ namespace Ejercicio5Bucles.Servicios
 {
     internal class OperativaImplementacion : OperativaInterfaz
     {
-        public void CalcularAñoBisiesto(int año)
+        public bool CalcularAñoBisiesto(int año)
         {
+
+            bool añobisiesto = false;
             
+            if ((año % 4) == 0)
+            {
+                añobisiesto = false;
+
+                if ((año % 100) == 0)
+                {
+                    añobisiesto = false;
+
+                    if ((año % 400) == 0)
+                    {
+                        añobisiesto = true;
+                        
+                    }
+                    else
+                    {
+                        añobisiesto = false;
+                    }
+                }
+            }
+
+            return añobisiesto;    
         }
     }
 }
